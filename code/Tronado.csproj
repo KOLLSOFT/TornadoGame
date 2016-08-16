@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0EB693F-F2C4-7F2C-50E7-76C79B62D836}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>GameRuntime</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>4.6.0f3</UnityVersion>
+    <RootNamespace>GameRuntime</RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="KangEngine">
+      <HintPath>libs\Debug\KangEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\unity4.6\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\unity4.6\Editor\Data\UnityExtensions\Unity\GUISystem\4.6.0\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\GameLogic\Scene\Component\" />
+    <Folder Include="src\GameLogic\Scene\Data\" />
+    <Folder Include="src\GameLogic\Scene\Unit\" />
+    <Folder Include="src\GameLogic\Weapon\Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\GameEntry\GameEntry.cs" />
+    <Compile Include="src\GameLogic\Action\ActionManager.cs" />
+    <Compile Include="src\GameLogic\Action\Data\ActionHashTypes.cs" />
+    <Compile Include="src\GameLogic\Action\Data\ActionTypes.cs" />
+    <Compile Include="src\GameLogic\Fight\Base\FightGameUnit.cs" />
+    <Compile Include="src\GameLogic\Fight\Base\IFightGameUnit.cs" />
+    <Compile Include="src\GameLogic\Fight\Data\FightEnum.cs" />
+    <Compile Include="src\GameLogic\Fight\FightManager.cs" />
+    <Compile Include="src\GameLogic\Main\GameMain.cs" />
+    <Compile Include="src\GameLogic\Main\GameManager.cs" />
+    <Compile Include="src\GameLogic\Main\TestCamera.cs" />
+    <Compile Include="src\GameLogic\Monster\Component\MonsterBindValues.cs" />
+    <Compile Include="src\GameLogic\Monster\Component\MonsterComponent.cs" />
+    <Compile Include="src\GameLogic\Monster\Data\MonsterCfgData.cs" />
+    <Compile Include="src\GameLogic\Monster\Data\MonsterEnum.cs" />
+    <Compile Include="src\GameLogic\Monster\MonsterManager.cs" />
+    <Compile Include="src\GameLogic\Monster\Unit\MonsterUnit.cs" />
+    <Compile Include="src\GameLogic\Player\Component\PlayerBindValues.cs" />
+    <Compile Include="src\GameLogic\Player\Component\PlayerComponent.cs" />
+    <Compile Include="src\GameLogic\Player\Data\PlayerCfgData.cs" />
+    <Compile Include="src\GameLogic\Player\Data\PlayerType.cs" />
+    <Compile Include="src\GameLogic\Player\Data\SpeedType.cs" />
+    <Compile Include="src\GameLogic\Player\PlayerManager.cs" />
+    <Compile Include="src\GameLogic\Player\Unit\PlayerUnit.cs" />
+    <Compile Include="src\GameLogic\Scene\SceneManager.cs" />
+    <Compile Include="src\GameLogic\Skill\Data\SkillData.cs" />
+    <Compile Include="src\GameLogic\Skill\SkillManager.cs" />
+    <Compile Include="src\GameLogic\Weapon\Unit\WeaponUnit.cs" />
+    <Compile Include="src\GameLogic\Weapon\WeaponManager.cs" />
+    <Compile Include="src\GameView\Base\WindownComponent.cs" />
+    <Compile Include="src\GameView\DebugPanelComponent.cs" />
+    <Compile Include="src\GameView\LoadingPanelComponent.cs" />
+    <Compile Include="src\GameView\MainPanelComponent.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetDir)$(TargetName).dll E:\TornadoGame\unityProject\Assets\Kang\Engine
+copy $(TargetDir)$(TargetName).pdb E:\TornadoGame\unityProject\Assets\Kang\Engine</PostBuildEvent>
+  </PropertyGroup>
+</Project>
