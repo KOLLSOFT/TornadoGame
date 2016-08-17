@@ -1,2 +1,2 @@
 4.6.0f3:2.2.0.0
-StandaloneWindows
+Android
