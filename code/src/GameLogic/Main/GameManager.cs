@@ -35,7 +35,7 @@ namespace GameLogic.Main
     {
         private PlayerUnit _player;
 
-        private bool isJoystickMode = false;
+        private bool _isJoystickMode = true;
         public GameManager() { }
 
         public void Init()
@@ -171,10 +171,12 @@ namespace GameLogic.Main
             FightManager.Inst().Update();
             SkillManager.Inst().Update();
 
-            if (isJoystickMode)
+            if (this._isJoystickMode)
             {
-                //float moveX = InputManager.GetAxis("Joystick", "Horizontal");
-                //float moveY = InputManager.GetAxis("Joystick", "Vertical");
+                float moveX = InputManager.Inst().GetAxis("Joystick", AxisType.AT_Horizontal);
+                float moveY = InputManager.Inst().GetAxis("Joystick", AxisType.AT_Vertical);
+
+                Debug.Log(moveX + ", " + moveY);
             }
             else
             {
